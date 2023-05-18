@@ -6,6 +6,7 @@ import { AdminComponent } from './admin.component';
 import { RegisterMasterComponent } from './register-master/register-master.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     AdminRoutingModule,
     MatSidenavModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

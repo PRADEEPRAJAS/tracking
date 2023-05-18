@@ -1,1 +1,87 @@
-<p>register-master works!</p>
+<div class="margin">
+  <div class="center">
+    <div class="card">
+      <div class="card-body">
+        <form action="" [formGroup]="masterRegister" (ngSubmit)="submit()">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  formControlName="employeeId"
+                  maxlength="10"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder=" "
+                />
+                <label for="floatingInput">Employee Id</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  formControlName="employeeName"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder=" "
+                />
+                <label for="floatingInput">Employee Name</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <select
+                  formControlName="designation"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="Associate">Associate</option>
+                  <option value="Sr.Associate">Sr. Associate</option>
+                  <option value="Manger - Project">Manger - Projects</option>
+                  <option value="Senior Project Manager">
+                    Senior Project Manager
+                  </option>
+                </select>
+                <label for="">Designation</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <select
+                  formControlName="project"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="Escrow">Escrow</option>
+                  <option value="Modernization">Modernization</option>
+                  <option value="App-Admin">App-Admins</option>
+                  <option value="App-dev">App-dev</option>
+                  <option value="SSA">SSA</option>
+                </select>
+                <label for="">Project</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <select
+                  formControlName="domain"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="IDE Web">IDE Web</option>
+                  <option value="IDE Full-stack">IDE Full-stack</option>
+                  <option value="ADM">ADMs</option>
+                </select>
+                <label for="">Domain</label>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
