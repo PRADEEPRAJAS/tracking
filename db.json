@@ -2,6 +2,6 @@
   "admin": {
     "username": "admin",
     "password": "admin",
-    "adminLogin": true
+    "adminStatus": true
   }
 }

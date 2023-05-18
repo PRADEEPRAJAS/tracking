@@ -22,10 +22,10 @@ export class AdminComponent implements OnInit {
   submit() {
     this.loginService.adminLogin(this.adminLoginForm.value).subscribe({
       next: (data) => {
-        if (data.adminLogin) {
-          this.stateService.adminStatusToggle(data.adminLogin)
-          this.router.navigateByUrl('/admin')
+        if (data.adminStatus) {
+          this.stateService.adminStatusToggle(data.adminStatus)
           localStorage.setItem("loginType", "admin")
+          this.router.navigateByUrl('/admin')
         }
       },
       error: (err) => {
