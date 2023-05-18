@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { developementApi } from 'src/app/constants/tracker.constants';
 @Injectable()
 export class LoginService {
 
   constructor(private http: HttpClient) { }
 
   adminLogin(admin: any): Observable<any> {
-    return this.http.get<any>(`http://localhost:3000/admin?admin=${admin.username}&password=${admin.password}`)
+    return this.http.get<any>(`${developementApi}/admin?admin=${admin.username}&password=${admin.password}`)
   }
 
 }
