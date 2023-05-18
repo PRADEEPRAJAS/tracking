@@ -4,5 +4,15 @@
     "password": "admin",
     "adminStatus": true
   },
-  "master": []
+  "master": [
+    {
+      "employeeId": "2139494",
+      "employeeName": "Pradeep Raja",
+      "designation": "Senior Project Manager",
+      "project": "App-Admin",
+      "domain": "IDE Web",
+      "password": "2139494@Cognizant",
+      "id": 1
+    }
+  ]
 }

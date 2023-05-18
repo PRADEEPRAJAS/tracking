@@ -2,4 +2,13 @@
   <div class="container-fluid">
     <a class="navbar-brand text-light" href="#">Tracker</a>
   </div>
+  <form
+    *ngIf="stateService.loginStatusObservable | async"
+    class="d-flex"
+    role="search"
+  >
+    <button class="btn btn-outline-danger" (click)="logout()" type="submit">
+      Logout
+    </button>
+  </form>
 </nav>

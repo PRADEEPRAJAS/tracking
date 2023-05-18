@@ -1,1 +1,32 @@
-<p>master works!</p>
+<div class="center">
+  <figure>
+    <img src="assets/img/onboarding-state-feedback.png" alt="" />
+  </figure>
+  <div class="card">
+    <div class="card-body">
+      <div class="login-box">
+        <form [formGroup]="masterLogin" (ngSubmit)="login()">
+          <div class="user-box">
+            <input
+              formControlName="employeeId"
+              type="text"
+              name=""
+              required=""
+            />
+            <label>Employee Id</label>
+          </div>
+          <div class="user-box">
+            <input
+              formControlName="password"
+              type="password"
+              name=""
+              required=""
+            />
+            <label>Password</label>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

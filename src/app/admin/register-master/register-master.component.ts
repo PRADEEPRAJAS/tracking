@@ -26,6 +26,7 @@ export class RegisterMasterComponent implements OnInit {
     this.adminService.masterRegister(masterDetails).subscribe({
       next: (res) => {
         alert("Registerd")
+        this.masterRegister.reset()
       },
       error: (err) => {
         alert(err.message)

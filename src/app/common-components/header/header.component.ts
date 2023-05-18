@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from 'src/app/state.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public stateService: StateService) { }
 
   ngOnInit() {
   }
-
+  logout() {
+    this.stateService.logout();
+  }
 }

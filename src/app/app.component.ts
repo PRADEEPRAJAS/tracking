@@ -12,8 +12,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     let type = localStorage.getItem('loginType')
     if (type === 'admin') {
+      this.stateService.adminStatusToggle(true);
       this.router.navigateByUrl(type)
-      this.stateService.adminStatusToggle(true)
+    } else if (type === "master") {
+      this.stateService.masterStatusToggle(true);
+      this.router.navigateByUrl(type)
     } else {
       this.router.navigateByUrl('/login')
     }
