@@ -22,6 +22,7 @@ export class AdminComponent implements OnInit {
   submit() {
     this.loginService.adminLogin(this.adminLoginForm.value).subscribe({
       next: (data) => {
+        console.log(data)
         if (data.adminStatus) {
           this.stateService.adminStatusToggle(data.adminStatus)
           localStorage.setItem("loginType", "admin")
