@@ -1,1 +1,66 @@
-<p>master works!</p>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Master</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li> -->
+      </ul>
+      <!-- <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img src="./../../assets/img/profile.png" width="50px" alt="" />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <p class="text-primary dropdown-item disabled">
+              <img src="./../../assets/img/man.png" width="20px" alt="" />
+              {{ user?.employeeName }}
+            </p>
+          </li>
+          <li>
+            <button class="dropdown-item" type="button">
+              <i class="ri-profile-line"></i> Profile
+            </button>
+          </li>
+          <li>
+            <button
+              class="dropdown-item"
+              (click)="logoutMaster()"
+              type="button"
+            >
+              <i class="ri-logout-box-line"></i>
+              Logout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

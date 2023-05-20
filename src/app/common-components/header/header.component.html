@@ -1,8 +1,15 @@
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar sticky-top navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand text-light" href="#">Tracker</a>
+    <div class="align">
+      <figure>
+        <img src="./../../../assets/img/logo.jpg" alt="" />
+      </figure>
+
+      <a class="navbar-brand text-light" href="#">Tracker</a>
+    </div>
   </div>
-  <form
+
+  <!-- <form
     *ngIf="stateService.loginStatusObservable | async"
     class="d-flex"
     role="search"
@@ -10,5 +17,5 @@
     <button class="btn btn-outline-danger" (click)="logout()" type="submit">
       Logout
     </button>
-  </form>
+  </form> -->
 </nav>

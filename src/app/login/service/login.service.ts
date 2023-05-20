@@ -11,7 +11,7 @@ export class LoginService {
     return this.http.get<any>(`${developementApi}/admin?username=${admin.username}&password=${admin.password}`)
   }
   masterLogin(master: any): Observable<any> {
-    return this.http.get<any>(`${developementApi}/master?employeeId=${master.employeeId}&password=${master.password}`)
+    return this.http.get<any>(`${developementApi}/master?employeeId=${master.employeeId}&&password=${master.password}`)
   }
 
 }

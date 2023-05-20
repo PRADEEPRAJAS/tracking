@@ -9,6 +9,8 @@ export class StateService {
 
   constructor(private router: Router) { }
 
+  loginUserDetails: any;
+
 
   loginStatus: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   loginStatusObservable: Observable<boolean> = this.loginStatus.asObservable();

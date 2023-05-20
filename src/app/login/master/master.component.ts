@@ -7,32 +7,37 @@ import { LoginService } from '../service/login.service';
 @Component({
   selector: 'app-master',
   templateUrl: './master.component.html',
-  styleUrls: ['./master.component.scss']
+  styleUrls: ['./master.component.scss'],
 })
 export class MasterComponent implements OnInit {
-  constructor(private router: Router, private fb: FormBuilder, private loginService: LoginService, private stateService: StateService) {
-
-  }
-  masterLogin!: FormGroup
+  constructor(
+    private router: Router,
+    private fb: FormBuilder,
+    private loginService: LoginService,
+    private stateService: StateService
+  ) { }
+  masterLogin!: FormGroup;
   ngOnInit(): void {
     this.masterLogin = this.fb.group({
       employeeId: [''],
-      password: ['']
-    })
+      password: [''],
+    });
   }
   login() {
     this.loginService.masterLogin(this.masterLogin.value).subscribe({
       next: (res) => {
-        if (res) {
-          localStorage.setItem('loginType', 'master')
-          this.stateService.masterStatusToggle(true)
-          this.router.navigateByUrl('/master')
+        if (res.length === 1) {
+          this.stateService.loginUserDetails = res;
+          localStorage.setItem('loginType', 'master');
+          this.stateService.masterStatusToggle(true);
+          this.router.navigateByUrl('/master');
+        } else {
+          alert('Not Found');
         }
       },
       error: (err) => {
-        alert(err.message)
-      }
-    })
+        alert(err.message);
+      },
+    });
   }
-
 }
