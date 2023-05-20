@@ -28,6 +28,7 @@ export class MasterComponent implements OnInit {
       next: (res) => {
         if (res.length === 1) {
           this.stateService.loginUserDetails = res;
+          localStorage.setItem('loginUser', JSON.stringify(res));
           localStorage.setItem('loginType', 'master');
           this.stateService.masterStatusToggle(true);
           this.router.navigateByUrl('/master');

@@ -1,0 +1,25 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.registerEmployee {
+  padding: 2em;
+  // height: 60vh;
+  background-image: linear-gradient(to left bottom, #0000004f, #00000045),
+    url("./../../../assets/img/ctsBack.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-blend-mode: color-burn;
+}
+.align {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

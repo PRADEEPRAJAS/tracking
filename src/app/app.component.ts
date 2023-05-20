@@ -11,10 +11,12 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private stateService: StateService) { }
   ngOnInit(): void {
     let type = localStorage.getItem('loginType')
+    let loginUser = localStorage.getItem('loginUser')
     if (type === 'admin') {
       this.stateService.adminStatusToggle(true);
       this.router.navigateByUrl(type)
     } else if (type === "master") {
+      this.stateService.loginUserDetails = loginUser ? JSON.parse(loginUser) : null
       this.stateService.masterStatusToggle(true);
       this.router.navigateByUrl(type)
     } else {

@@ -23,5 +23,14 @@
       "password": "2139409@Cognizant",
       "id": 2
     }
-  ]
+  ],
+  "domains": ["IDE Web", "IDE FSE", "ADM", "Quality Engineering & Assurance"],
+
+  "designations": [
+    "Programmer Analyst Trainee",
+    "Programmer Analyst",
+    "Programmer Trainee",
+    "Programmer"
+  ],
+  "technologies": ["Angular", "Java", "SpringBoot"]
 }

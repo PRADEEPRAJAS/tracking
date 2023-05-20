@@ -33,6 +33,7 @@ export class StateService {
 
   logout() {
     localStorage.removeItem('loginType')
+    localStorage.removeItem('loginUser')
     this.adminStatusToggle(false);
     this.masterStatusToggle(false);
     this.router.navigateByUrl('/login');

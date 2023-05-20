@@ -29,13 +29,21 @@
       </form> -->
 
       <div class="btn-group">
-        <button
+        <!-- <button
           type="button"
-          class="btn"
+          class="btn custom"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          <img src="./../../assets/img/profile.png" width="50px" alt="" />
+          <i class="ri-menu-add-fill"></i>
+        </button> -->
+        <button
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          mat-icon-button
+          aria-label="Example icon button with a vertical three dot icon"
+        >
+          <mat-icon>more_vert</mat-icon>
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
           <li>
@@ -44,6 +52,7 @@
               {{ user?.employeeName }}
             </p>
           </li>
+          <li><hr class="dropdown-divider" /></li>
           <li>
             <button class="dropdown-item" type="button">
               <i class="ri-profile-line"></i> Profile
@@ -64,3 +73,20 @@
     </div>
   </div>
 </nav>
+<mat-tab-group
+  animationDuration="100ms"
+  mat-stretch-tabs="false"
+  mat-align-tabs="start"
+>
+  <mat-tab class="background-master" label="Register Employee">
+    <div class="registerEmployee">
+      <ng-template matTabContent>
+        <app-employee-register></app-employee-register>
+      </ng-template>
+    </div>
+  </mat-tab>
+  <mat-tab label="Register Mentor">
+    <ng-template matTabContent> master </ng-template>
+  </mat-tab>
+  <!-- <mat-tab label="Third">  </mat-tab> -->
+</mat-tab-group>
