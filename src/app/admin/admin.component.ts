@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
-  constructor(private router: Router) { }
-
-
+  constructor(private router: Router, private stateService: StateService) { }
+  logout() {
+    this.stateService.logout();
+  }
 }
